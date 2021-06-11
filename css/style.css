@@ -93,6 +93,10 @@ a:hover {
   color: gainsboro;
 } */
 
+ul li:first-child {
+  text-shadow: 1px 1px 5px darkgrey;
+}
+
 /* Layout Styles --------------------------- */
 
 .wrapper {
