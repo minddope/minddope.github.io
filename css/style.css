@@ -93,10 +93,6 @@ a:hover {
   color: gainsboro;
 } */
 
-ul li:first-child {
-  text-shadow: 1px 1px 5px darkgrey;
-}
-
 /* Layout Styles --------------------------- */
 
 .wrapper {
@@ -137,6 +133,10 @@ ul li:first-child {
 .new-articles li {
   margin-bottom: 0.85em;
   line-height: 1.4;
+}
+
+.new-articles li:first-child {
+  text-shadow: 1px 1px 5px darkgrey;
 }
 
 .primary-content {
