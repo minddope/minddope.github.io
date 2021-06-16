@@ -164,6 +164,14 @@ a:hover {
 
 /* Media Queries -------------------- */
 
+/* Target vewport sizes less than 303px */
+
+@media (max-width: 302px) {
+  .logo {
+    line-height: 1;
+  }
+}
+
 /* Target viewport sizes less than 576px */
 
 @media (max-width: 575px) {
