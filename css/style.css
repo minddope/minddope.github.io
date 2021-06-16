@@ -140,17 +140,7 @@ a:hover {
 }
 
 .primary-content {
-  line-height: 1.3;
-}
-
-/* .table-of-contents {
-  margin: 3em 0;
-} */
-
-.table-of-contents li {
-  font-size: 1.1em;
-  margin-bottom: 0.5em;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .poem {
