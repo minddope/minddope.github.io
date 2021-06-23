@@ -40,7 +40,6 @@ cite {
 }
 
 p {
-  text-align: justify;
   font-size: 1.025em
 }
 
@@ -50,10 +49,13 @@ figcaption {
 }
 
 footer {
+  width: calc(92% - 60px);
+  max-width: 920px;
   border-top: 1px solid black;
+  padding: 2em 0;
+  margin: 0 auto;
   text-align: center;
   font-size: .85em;
-  padding: 2em 0;
   clear: both;
 }
 
@@ -98,7 +100,8 @@ a:hover {
 .wrapper {
   width: 92%;
   max-width: 980px;
-  margin: auto;
+  min-height: calc(100vh - 71.38px);
+  margin: 0 auto;
 }
 
 .logo {
