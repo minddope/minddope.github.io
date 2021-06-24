@@ -169,7 +169,7 @@ a:hover {
 
 /* Target viewport sizes less than 576px */
 
-@media (max-width: 575px) {
+@media screen and (max-width: 575px) {
   header {
     text-align: center;
     margin-bottom: 2.5rem;
@@ -191,7 +191,7 @@ a:hover {
 
 /* Target viewport sizes 576px and wider */
 
-@media (min-width: 576px) {
+@media screen and (min-width: 576px) {
   .logo {
     float: left;
   }
@@ -214,7 +214,7 @@ a:hover {
 
 /* Target a viewport range wider than 575px and narrower than 992px */
 
-@media (min-width: 576px) and (max-width: 991px) {
+@media screen and (min-width: 576px) and (max-width: 991px) {
   nav {
     float: left;
     margin-left: 20px;
@@ -222,9 +222,17 @@ a:hover {
   }
 }
 
-/* Target a viewport sizes less than 773px */
+/* Target a viewport range wider than 719px and narrower than 793px */
 
-@media (max-width: 772px) {
+@media screen and (min-width: 719px) and (max-width: 792px) {
+  .navigation-eng {
+    padding-right: 68px;
+  }
+}
+
+/* Target a viewport sizes less than 793px */
+
+@media screen and (max-width: 792px) {
   nav {
     margin-top: 0;
   }
@@ -232,7 +240,7 @@ a:hover {
 
 /* Target viewport sizes 768px and wider */
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .primary-content {
     float: left;
     width: 65%;
@@ -248,7 +256,7 @@ a:hover {
 
 /* Target viewport sizes 992px and wider */
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   nav {
     float: right;
   }
