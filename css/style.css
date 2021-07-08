@@ -91,10 +91,6 @@ a:hover {
   color: #257d75;
 }
 
-/* a:active {
-  color: gainsboro;
-} */
-
 /* Layout Styles --------------------------- */
 
 .wrapper {
@@ -105,7 +101,7 @@ a:hover {
 }
 
 .logo {
-  display: inline-block;
+  /* display: inline-block;  1.07.21 podejście pierwsze do flexbox'a; wykomentowuje kod, który nie będzie potrzebny */
   font-family: 'Fascinate', cursive;
   font-size: 3em;
   text-shadow: 2px 2px 6px #053a35;
@@ -113,7 +109,7 @@ a:hover {
 
 .main-photo {
   max-width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 1.25rem;
   border-radius: 20px;
 }
 
@@ -149,21 +145,23 @@ a:hover {
 .poem {
   text-align: center;
   line-height: 1.5;
-  padding: 2em 0;
+  padding: 0.5em 0 2em 0;
 }
 
 .article {
-  padding: 2em 0;
+  padding-bottom: 2em;
 }
 
 
 /* Float Clearfix ------------------ */
 
-.group:after {
+/* .group:after {
   content: "";
   display: table;
   clear: both;
-}
+}  1.07.21 podejście pierwsze do flexbox'a; wykomentowuje kod, który nie będzie potrzebny */
+
+
 
 /* Media Queries -------------------- */
 
@@ -172,7 +170,7 @@ a:hover {
 @media screen and (max-width: 575px) {
   header {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.25rem;
   }
   .logo {
     margin-bottom: 0;
@@ -182,65 +180,83 @@ a:hover {
     margin: .2em 0;
     background-color: #b1bfbe;
   }
-  /* aside {
-    padding-bottom: 0.85em;
-    padding-top: 2em;
-    border-bottom: 1px solid black;
-  } */
+  
+  /* Flexbox (new code 1.07.21) */
+
+  .group,
+  .navigation {
+    display: flex;
+    flex-direction: column;
+  }
+  .group {
+    align-items: stretch;
+  }
 }
 
 /* Target viewport sizes 576px and wider */
 
 @media screen and (min-width: 576px) {
-  .logo {
-    float: left;
-  }
-  nav {
-    margin-top: 45px;
+  h3 {
+    margin-bottom: 1.5em;
   }
   nav li {
     display: inline-block;
     margin: 0 0.45em;
+  } 
+  .group,
+  .navigation {
+    display: flex;
   }
-  h3 {
-    margin-bottom: 1.5em;
+  .group {
+    flex-direction: column;
+    align-items: center;
   }
-  /* aside {
-    padding-bottom: 0.85em;
-    padding-top: 2em;
-    border-bottom: 1px solid black;
-  } */
 }
 
 /* Target a viewport range wider than 575px and narrower than 992px */
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
-  nav {
-    float: left;
-    margin-left: 20px;
-    /* margin-top: 20px; */
+  .main-photo {
+    margin-top: 1.25rem;
   }
 }
 
 /* Target a viewport range wider than 719px and narrower than 793px */
 
-@media screen and (min-width: 719px) and (max-width: 792px) {
+/* @media screen and (min-width: 719px) and (max-width: 792px) {
   .navigation-eng {
     padding-right: 68px;
   }
-}
+} */
 
 /* Target a viewport sizes less than 793px */
 
-@media screen and (max-width: 792px) {
+/* @media screen and (max-width: 792px) {
   nav {
     margin-top: 0;
   }
-}
+} */
 
 /* Target viewport sizes 768px and wider */
 
 @media screen and (min-width: 768px) {
+  .main-content {
+    display: flex;
+    align-items: flex-start;
+  }
+  .primary-content {
+    flex: 2 65%;
+    padding-right: 2.5em;
+  }
+  .aside {
+    flex: 1 28%;
+    padding-bottom: 0.85em;
+    padding-top: 5em;
+    border-bottom: 1px solid black;
+  }
+}
+
+/* @media screen and (min-width: 768px) {
   .primary-content {
     float: left;
     width: 65%;
@@ -252,12 +268,14 @@ a:hover {
     padding-top: 2em;
     border-bottom: 1px solid black;
   }
-}
+}     zabieram sie za flexbox glownego kontentu 7.07.21 */
 
 /* Target viewport sizes 992px and wider */
 
 @media screen and (min-width: 992px) {
-  nav {
-    float: right;
+  .group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
