@@ -107,10 +107,6 @@ a:hover {
   text-shadow: 2px 2px 6px #053a35;
 }
 
-.home-photo {
-  margin-top: 2rem;
-}
-
 .main-photo {
   max-width: 100%;
   margin-bottom: 1.25rem;
@@ -124,12 +120,26 @@ a:hover {
 }
 
 .intro {
-  font-size: 1.2em;
-  padding: 1em 0 2em 0;
+  color: ghostwhite;
+  font-size: 1.5em;
   line-height: 1.5em;
+  background: url(../img/kamienie.JPG) center / cover no-repeat #797c7c;
+  background-blend-mode: multiply;
+  border-radius: 20px;
+  padding: 2em 0;
+  margin-top: 3rem;
 }
 
 .main-quote {
+  color: ghostwhite;
+  font-size: 1.2em;
+  background: url(../img/joga3.jpeg) center / cover no-repeat #797c7c;
+  background-blend-mode: multiply;
+  border-radius: 20px;
+  padding: 2em 0;
+}
+
+.quote {
   font-size: 1.1em;
 }
 
@@ -147,9 +157,13 @@ a:hover {
 }
 
 .poem {
+  color: ghostwhite;
+  font-size: 1.1em;
   text-align: center;
-  line-height: 1.5;
-  padding: 0.5em 0 2em 0;
+  background: url(../img/medytacja.jpeg) center / cover no-repeat #797c7c;
+  background-blend-mode: multiply;
+  border-radius: 20px;
+  padding: 2em 0;
 }
 
 .article {
