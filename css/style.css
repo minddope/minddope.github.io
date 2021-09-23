@@ -163,7 +163,7 @@ a:hover {
   background: url(../img/medytacja.jpeg) center / cover no-repeat #797c7c;
   background-blend-mode: multiply;
   border-radius: 20px;
-  padding: 2em 0;
+  padding: 2em 0.5em;
 }
 
 .article {
