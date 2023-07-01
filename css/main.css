@@ -175,6 +175,11 @@ a:hover {
   text-shadow: 1px 1px 5px darkgrey;
 }
 
+.main-photo {
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
 @media screen and (min-width: 576px) {
   .logo {
     margin: 0.5em 0;
